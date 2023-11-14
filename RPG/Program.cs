@@ -120,12 +120,17 @@
                 // 이미 장착 중인 아이템을 선택하면 장착 해제
                 item.Equipped = false;
                 Console.WriteLine($"[{item.Name}]를 장착 해제했습니다.");
+                DisplayGameIntro();
+                return;
+
             }
             else
             {
                 // 아직 장착 중이지 않은 아이템을 선택하면 장착
                 item.Equipped = true;
                 Console.WriteLine($"[{item.Name}]를 장착했습니다.");
+                DisplayGameIntro();
+                return;
             }
         }
 
